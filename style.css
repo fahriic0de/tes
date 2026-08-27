@@ -424,14 +424,31 @@ button {
     gap: 6px;
 }
 
-.terminal-dots span {
-    width: 9px;
-    height: 9px;
+.terminal-dots span:nth-child(1) {
+    background: #2563eb;
 
-    border-radius: 50%;
+    box-shadow:
+        0 0 10px rgba(37, 99, 235, .55);
+}
 
-    background:
-        #334155;
+.terminal-dots span:nth-child(2) {
+    background: #38bdf8;
+
+    box-shadow:
+        0 0 10px rgba(56, 189, 248, .55);
+}
+
+.terminal-dots span:nth-child(3) {
+    background: #22d3ee;
+
+    box-shadow:
+        0 0 10px rgba(34, 211, 238, .55);
+}
+
+.terminal-dots span:hover {
+    transform: scale(1.2);
+
+    filter: brightness(1.3);
 }
 
 .terminal-title {
