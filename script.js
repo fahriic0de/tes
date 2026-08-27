@@ -7,7 +7,7 @@
 
 const typingElement = document.getElementById("typing");
 
-const text = "Cyber Security Enthusiast";
+const text = "Cyber Security Enthusiast Penetration Testing Student Web Security Researcher Ethical Hacking Learner";
 
 let index = 0;
 let deleting = false;
