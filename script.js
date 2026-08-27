@@ -3,12 +3,18 @@
    ========================================= */
 
 
-// ================= TYPING EFFECT =================
+/* ================= TYPING EFFECT ================= */
 
 const typingElement = document.getElementById("typing");
 
-const text = "Cyber Security Enthusiast";
+const texts = [
+    "Cyber Security Enthusiast",
+    "Penetration Testing Student",
+    "Web Security Researcher",
+    "Ethical Hacking Learner"
+];
 
+let textIndex = 0;
 let index = 0;
 let deleting = false;
 
@@ -16,16 +22,18 @@ function typeEffect() {
 
     if (!typingElement) return;
 
+    const currentText = texts[textIndex];
+
     if (!deleting) {
 
         // Mengetik
         typingElement.textContent =
-            text.substring(0, index + 1);
+            currentText.substring(0, index + 1);
 
         index++;
 
         // Selesai mengetik
-        if (index === text.length) {
+        if (index === currentText.length) {
 
             deleting = true;
 
@@ -39,7 +47,7 @@ function typeEffect() {
 
         // Menghapus
         typingElement.textContent =
-            text.substring(0, index - 1);
+            currentText.substring(0, index - 1);
 
         index--;
 
@@ -47,6 +55,10 @@ function typeEffect() {
         if (index === 0) {
 
             deleting = false;
+
+            // Pindah ke text berikutnya
+            textIndex =
+                (textIndex + 1) % texts.length;
 
             setTimeout(typeEffect, 500);
             return;
