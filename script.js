@@ -3,6 +3,63 @@
    ========================================= */
 
 
+// ================= TYPING EFFECT =================
+
+const typingElement = document.getElementById("typing");
+
+const text = "Cyber Security Enthusiast";
+
+let index = 0;
+let deleting = false;
+
+function typeEffect() {
+
+    if (!typingElement) return;
+
+    if (!deleting) {
+
+        // Mengetik
+        typingElement.textContent =
+            text.substring(0, index + 1);
+
+        index++;
+
+        // Selesai mengetik
+        if (index === text.length) {
+
+            deleting = true;
+
+            setTimeout(typeEffect, 1800);
+            return;
+        }
+
+        setTimeout(typeEffect, 90);
+
+    } else {
+
+        // Menghapus
+        typingElement.textContent =
+            text.substring(0, index - 1);
+
+        index--;
+
+        // Selesai menghapus
+        if (index === 0) {
+
+            deleting = false;
+
+            setTimeout(typeEffect, 500);
+            return;
+        }
+
+        setTimeout(typeEffect, 50);
+    }
+}
+
+// Mulai animasi
+typeEffect();
+
+
 /* ================= MOBILE MENU ================= */
 
 const menuButton =
