@@ -1,45 +1,232 @@
-function toggleMenu() {
-    const nav = document.querySelector("nav");
-    nav.classList.toggle("active");
+/* =========================================
+   FAHRI XD - CYBER SECURITY PORTFOLIO
+   ========================================= */
+
+
+/* ================= MOBILE MENU ================= */
+
+const menuButton =
+    document.getElementById("menuButton");
+
+const nav =
+    document.getElementById("nav");
+
+
+if (menuButton && nav) {
+
+    menuButton.addEventListener("click", () => {
+
+        const isOpen =
+            nav.classList.toggle("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+        menuButton.innerHTML =
+            isOpen ? "✕" : "☰";
+
+    });
+
+
+    /* Close menu when clicking a link */
+
+    const navLinks =
+        nav.querySelectorAll("a");
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            nav.classList.remove("open");
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuButton.innerHTML = "☰";
+
+        });
+
+    });
+
 }
 
 
-// Close mobile menu after clicking a link
+/* ================= CURRENT YEAR ================= */
 
-document.querySelectorAll("nav a").forEach(link => {
+const year =
+    document.getElementById("year");
 
-    link.addEventListener("click", () => {
+if (year) {
 
-        document
-            .querySelector("nav")
-            .classList.remove("active");
+    year.textContent =
+        new Date().getFullYear();
 
-    });
+}
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
 
 });
 
 
-// Simple terminal typing effect
+/* ================= BACK TO TOP ================= */
 
-const terminalText = [
-    "cybersecurity enthusiast",
-    "web security learner",
-    "penetration testing student",
-    "security researcher"
-];
+const topButton =
+    document.getElementById("topButton");
 
-let index = 0;
 
-const terminalStatus =
-    document.querySelector(".terminal-body .green");
+if (topButton) {
 
-setInterval(() => {
+    window.addEventListener(
+        "scroll",
+        () => {
 
-    if (!terminalStatus) return;
+            if (window.scrollY > 500) {
 
-    index = (index + 1) % terminalText.length;
+                topButton.classList.add(
+                    "show"
+                );
 
-    terminalStatus.textContent =
-        terminalText[index];
+            } else {
 
-}, 2500);
+                topButton.classList.remove(
+                    "show"
+                );
+
+            }
+
+        }
+    );
+
+
+    topButton.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+}
+
+
+/* ================= TERMINAL TYPING ================= */
+
+const cursor =
+    document.querySelector(".cursor");
+
+
+if (cursor) {
+
+    setInterval(() => {
+
+        cursor.style.opacity =
+            cursor.style.opacity === "0"
+                ? "1"
+                : "0";
+
+    }, 550);
+
+}
+
+
+/* ================= SMOOTH INTERNAL LINKS ================= */
+
+document
+    .querySelectorAll('a[href^="#"]')
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            function (event) {
+
+                const targetId =
+                    this.getAttribute("href");
+
+                if (
+                    targetId === "#" ||
+                    targetId === ""
+                ) {
+                    return;
+                }
+
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
+
+                if (target) {
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    });
+
+
+/* ================= CONSOLE ================= */
+
+console.log(
+    "%c FAHRI XD ",
+    "background:#2563eb;color:white;font-size:20px;font-weight:bold;padding:8px;"
+);
+
+console.log(
+    "%c Cyber Security Portfolio ",
+    "color:#38bdf8;font-size:14px;"
+);
+
+console.log(
+    "System online."
+);
