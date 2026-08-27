@@ -418,32 +418,59 @@ button {
         1px solid var(--border);
 }
 
+/* ================= TERMINAL DOTS ================= */
+
 .terminal-dots {
     display: flex;
+    align-items: center;
 
-    gap: 6px;
+    gap: 8px;
 }
+
+.terminal-dots span {
+    width: 12px;
+    height: 12px;
+
+    display: block;
+
+    border-radius: 50%;
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+}
+
+
+/* DOT 1 - BLUE */
 
 .terminal-dots span:nth-child(1) {
     background: #2563eb;
 
     box-shadow:
-        0 0 10px rgba(37, 99, 235, .55);
+        0 0 8px rgba(37, 99, 235, .65),
+        0 0 16px rgba(37, 99, 235, .25);
 }
+
+
+/* DOT 2 - SKY BLUE */
 
 .terminal-dots span:nth-child(2) {
     background: #38bdf8;
 
     box-shadow:
-        0 0 10px rgba(56, 189, 248, .55);
+        0 0 8px rgba(56, 189, 248, .65),
+        0 0 16px rgba(56, 189, 248, .25);
 }
+
+
+/* DOT 3 - CYAN */
 
 .terminal-dots span:nth-child(3) {
     background: #22d3ee;
 
     box-shadow:
-        0 0 10px rgba(34, 211, 238, .55);
-}
+        0 0 8px rgba(34, 211, 238, .65),
+        0 0 16px rgba(34, 211, 238
 
 .terminal-dots span:hover {
     transform: scale(1.2);
