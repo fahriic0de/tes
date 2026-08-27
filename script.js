@@ -8,7 +8,6 @@
 const typingElement = document.getElementById("typing");
 
 const text = "Cyber Security Enthusiast";
-const text = "Peneration Testing";
 
 let index = 0;
 let deleting = false;
