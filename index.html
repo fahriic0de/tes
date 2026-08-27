@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fahri XD | Cyber Security Portfolio</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Personal cybersecurity portfolio - penetration testing, web security and security research.">
+    <meta
+        name="description"
+        content="Fahri XD - Cyber Security Portfolio"
+    >
+
+    <meta
+        name="theme-color"
+        content="#030712"
+    >
+
+    <title>Fahri XD | Cyber Security</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="logo">
-        <span>./</span>fahri
-    </div>
+<!-- ================= NAVBAR ================= -->
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#timeline">Journey</a>
-        <a href="#contact">Contact</a>
+<header class="navbar">
+
+    <a href="#home" class="brand">
+        ./<span>fahri</span>
+    </a>
+
+    <nav id="nav">
+
+        <a href="#home">HOME</a>
+
+        <a href="#about">ABOUT</a>
+
+        <a href="#skills">SKILLS</a>
+
+        <a href="#projects">PROJECTS</a>
+
+        <a href="#journey">JOURNEY</a>
+
+        <a href="#contact">CONTACT</a>
+
     </nav>
 
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
+
+<main>
+
 <section id="home" class="hero">
 
     <div class="hero-content">
 
-        <div class="terminal-label">
-            <span class="dot"></span>
+        <div class="status">
+            <span class="status-dot"></span>
             SYSTEM ONLINE
         </div>
 
-        <p class="small-text">
-            Hello, I'm
+        <p class="eyebrow">
+            CYBER SECURITY PORTFOLIO
         </p>
 
         <h1>
@@ -55,59 +87,97 @@
             Cyber Security Enthusiast
         </h2>
 
-        <p class="description">
-            Exploring cybersecurity, web security, penetration testing,
-            vulnerability research and ethical hacking.
+        <p class="hero-description">
+            Exploring cybersecurity, web security,
+            penetration testing, vulnerability research
+            and ethical hacking.
         </p>
 
-        <div class="buttons">
-            <a href="#projects" class="btn primary">
+        <div class="hero-buttons">
+
+            <a
+                href="#projects"
+                class="button primary"
+            >
                 View Projects
             </a>
 
-            <a href="#contact" class="btn secondary">
+            <a
+                href="#contact"
+                class="button secondary"
+            >
                 Contact Me
             </a>
+
         </div>
 
     </div>
 
-    <div class="hero-terminal">
 
-        <div class="terminal-header">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- TERMINAL -->
+
+    <div class="terminal">
+
+        <div class="terminal-top">
+
+            <div class="terminal-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="terminal-title">
+                fahri@cybersec:~
+            </div>
+
         </div>
 
         <div class="terminal-body">
 
             <p>
-                <b>root@fahri</b>:~$ whoami
+                <span class="prompt">
+                    root@fahri:~$
+                </span>
+                whoami
             </p>
 
-            <p class="green">
-                cybersecurity enthusiast
+            <p class="terminal-green">
+                penetration testing student
             </p>
+
+            <br>
 
             <p>
-                <b>root@fahri</b>:~$ skills
+                <span class="prompt">
+                    root@fahri:~$
+                </span>
+                skills
             </p>
 
-            <p class="green">
+            <p class="terminal-green">
                 Web Security · Pentesting · Linux
             </p>
 
-            <p>
-                <b>root@fahri</b>:~$ status
-            </p>
-
-            <p class="green">
-                learning...
-            </p>
+            <br>
 
             <p>
-                <b>root@fahri</b>:~$ <span class="cursor">█</span>
+                <span class="prompt">
+                    root@fahri:~$
+                </span>
+                status
+            </p>
+
+            <p class="terminal-green">
+                Learning...
+            </p>
+
+            <br>
+
+            <p>
+                <span class="prompt">
+                    root@fahri:~$
+                </span>
+                <span class="cursor">█</span>
             </p>
 
         </div>
@@ -117,61 +187,63 @@
 </section>
 
 
-<!-- ABOUT -->
-<section id="about" class="section">
+<!-- ================= ABOUT ================= -->
 
-    <div class="section-title">
-        <span>01.</span>
-        About Me
+<section id="about" class="section reveal">
+
+    <div class="section-heading">
+        <span>01.</span> ABOUT ME
     </div>
 
     <div class="about-grid">
 
-        <div>
+        <div class="about-text">
+
+            <p class="mini-title">
+                WHO AM I?
+            </p>
+
             <h2>
-                Curious about how
-                <span>systems break.</span>
+                Learning to
+                <span>break & secure</span>
+                systems.
             </h2>
 
             <p>
-                Saya tertarik dengan dunia cybersecurity dan bagaimana
-                sebuah aplikasi, website, maupun sistem dapat diamankan
-                dari berbagai jenis ancaman.
+                I'm interested in cybersecurity,
+                especially web security, penetration
+                testing and vulnerability research.
             </p>
 
             <p>
-                Fokus saya adalah mempelajari keamanan web, penetration
-                testing, vulnerability research, Linux dan automation.
+                This portfolio contains my learning
+                journey, projects, experiments and
+                cybersecurity notes.
             </p>
 
-            <p>
-                Semua pengujian keamanan dilakukan pada sistem yang
-                saya miliki atau memiliki izin untuk diuji.
-            </p>
         </div>
 
-        <div class="info-card">
 
-            <div class="info">
-                <span>Location</span>
-                <strong>Indonesia</strong>
-            </div>
+        <div class="about-card">
 
-            <div class="info">
+            <div class="info-row">
                 <span>Focus</span>
-                <strong>Web Security</strong>
+                <strong>WEB SECURITY</strong>
             </div>
 
-            <div class="info">
+            <div class="info-row">
+                <span>Specialization</span>
+                <strong>PENTESTING</strong>
+            </div>
+
+            <div class="info-row">
                 <span>Environment</span>
-                <strong>Linux / Termux</strong>
+                <strong>LINUX / TERMUX</strong>
             </div>
 
-            <div class="info">
+            <div class="info-row">
                 <span>Status</span>
-                <strong class="online">
-                    ● Learning
-                </strong>
+                <strong>LEARNING</strong>
             </div>
 
         </div>
@@ -181,211 +253,299 @@
 </section>
 
 
-<!-- SKILLS -->
-<section id="skills" class="section dark-section">
+<!-- ================= SKILLS ================= -->
 
-    <div class="section-title">
-        <span>02.</span>
-        Skills
+<section id="skills" class="section section-dark reveal">
+
+    <div class="section-heading">
+        <span>02.</span> SKILLS
     </div>
 
     <div class="skills-grid">
 
-        <div class="skill-card">
-            <div class="skill-icon">&lt;/&gt;</div>
 
-            <h3>Web Security</h3>
+        <article class="skill-card">
 
-            <p>
-                Understanding common web vulnerabilities,
-                authentication issues and security misconfigurations.
-            </p>
+            <span class="skill-number">
+                01
+            </span>
 
-            <div class="progress">
-                <div style="width:75%"></div>
+            <div class="skill-icon">
+                &lt;/&gt;
             </div>
 
-            <small>75%</small>
-        </div>
-
-
-        <div class="skill-card">
-            <div class="skill-icon">⌘</div>
-
-            <h3>Linux</h3>
+            <h3>
+                Web Security
+            </h3>
 
             <p>
-                Comfortable with terminal environments,
-                shell scripting and security tooling.
+                Understanding common web
+                vulnerabilities, HTTP security,
+                authentication and application
+                security.
             </p>
 
-            <div class="progress">
-                <div style="width:70%"></div>
+            <div class="skill-bar">
+                <div style="width: 78%;"></div>
             </div>
 
-            <small>70%</small>
-        </div>
+            <small>
+                78%
+            </small>
+
+        </article>
 
 
-        <div class="skill-card">
-            <div class="skill-icon">Py</div>
+        <article class="skill-card">
 
-            <h3>Python</h3>
+            <span class="skill-number">
+                02
+            </span>
+
+            <div class="skill-icon">
+                ⚡
+            </div>
+
+            <h3>
+                Pentesting
+            </h3>
 
             <p>
-                Building small security utilities,
-                automation scripts and scanners.
+                Learning reconnaissance,
+                vulnerability assessment and
+                penetration testing methodology.
             </p>
 
-            <div class="progress">
-                <div style="width:65%"></div>
+            <div class="skill-bar">
+                <div style="width: 72%;"></div>
             </div>
 
-            <small>65%</small>
-        </div>
+            <small>
+                72%
+            </small>
+
+        </article>
 
 
-        <div class="skill-card">
-            <div class="skill-icon">01</div>
+        <article class="skill-card">
 
-            <h3>Recon</h3>
+            <span class="skill-number">
+                03
+            </span>
+
+            <div class="skill-icon">
+                $
+            </div>
+
+            <h3>
+                Linux
+            </h3>
 
             <p>
-                Learning asset discovery, information gathering
-                and attack-surface mapping.
+                Linux command line, system
+                administration, scripting and
+                security tooling.
             </p>
 
-            <div class="progress">
-                <div style="width:70%"></div>
+            <div class="skill-bar">
+                <div style="width: 80%;"></div>
             </div>
 
-            <small>70%</small>
-        </div>
+            <small>
+                80%
+            </small>
+
+        </article>
+
+
+        <article class="skill-card">
+
+            <span class="skill-number">
+                04
+            </span>
+
+            <div class="skill-icon">
+                ◈
+            </div>
+
+            <h3>
+                Research
+            </h3>
+
+            <p>
+                Security research, CVE analysis,
+                vulnerability investigation and
+                lab experimentation.
+            </p>
+
+            <div class="skill-bar">
+                <div style="width: 68%;"></div>
+            </div>
+
+            <small>
+                68%
+            </small>
+
+        </article>
 
     </div>
 
 </section>
 
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
+<!-- ================= PROJECTS ================= -->
 
-    <div class="section-title">
-        <span>03.</span>
-        Projects
+<section id="projects" class="section reveal">
+
+    <div class="section-heading">
+        <span>03.</span> PROJECTS
     </div>
 
     <div class="projects-grid">
 
-        <article class="project">
 
-            <div class="project-top">
-                <span class="folder">▣</span>
+        <article class="project-card">
 
-                <div>
-                    <a href="#" aria-label="GitHub project">
-                        GitHub ↗
-                    </a>
-                </div>
+            <div class="project-header">
+
+                <span class="folder">
+                    📁
+                </span>
+
+                <a
+                    href="#"
+                    aria-label="Project link"
+                >
+                    ↗
+                </a>
+
             </div>
 
-            <h3>Web Security Scanner</h3>
+            <h3>
+                Web Security Lab
+            </h3>
 
             <p>
-                Experimental security scanner for learning
-                web application security testing.
+                Personal laboratory for studying
+                web application security and
+                vulnerability assessment.
             </p>
 
             <div class="tags">
-                <span>Python</span>
-                <span>Requests</span>
-                <span>Security</span>
+                <span>WEB</span>
+                <span>SECURITY</span>
+                <span>LAB</span>
             </div>
 
         </article>
 
 
-        <article class="project">
+        <article class="project-card">
 
-            <div class="project-top">
-                <span class="folder">▣</span>
+            <div class="project-header">
 
-                <div>
-                    <a href="#" aria-label="GitHub project">
-                        GitHub ↗
-                    </a>
-                </div>
+                <span class="folder">
+                    📁
+                </span>
+
+                <a
+                    href="#"
+                    aria-label="Project link"
+                >
+                    ↗
+                </a>
+
             </div>
 
-            <h3>Recon Toolkit</h3>
+            <h3>
+                Security Scanner
+            </h3>
 
             <p>
-                Collection of automation scripts for organizing
-                authorized reconnaissance activities.
+                Educational security scanner
+                for testing authorized laboratory
+                environments.
             </p>
 
             <div class="tags">
-                <span>Bash</span>
-                <span>Python</span>
-                <span>Linux</span>
+                <span>PYTHON</span>
+                <span>SCANNER</span>
+                <span>LAB</span>
             </div>
 
         </article>
 
 
-        <article class="project">
+        <article class="project-card">
 
-            <div class="project-top">
-                <span class="folder">▣</span>
+            <div class="project-header">
 
-                <div>
-                    <a href="#" aria-label="GitHub project">
-                        GitHub ↗
-                    </a>
-                </div>
+                <span class="folder">
+                    📁
+                </span>
+
+                <a
+                    href="#"
+                    aria-label="Project link"
+                >
+                    ↗
+                </a>
+
             </div>
 
-            <h3>Cybersecurity Lab</h3>
+            <h3>
+                CVE Research
+            </h3>
 
             <p>
-                Local vulnerable applications used for practicing
-                penetration testing and vulnerability analysis.
+                Notes and analysis of publicly
+                documented vulnerabilities for
+                security learning.
             </p>
 
             <div class="tags">
-                <span>Docker</span>
-                <span>Linux</span>
-                <span>Web</span>
+                <span>CVE</span>
+                <span>RESEARCH</span>
+                <span>POC</span>
             </div>
 
         </article>
+
 
     </div>
 
 </section>
 
 
-<!-- TIMELINE -->
-<section id="timeline" class="section dark-section">
+<!-- ================= JOURNEY ================= -->
 
-    <div class="section-title">
-        <span>04.</span>
-        Journey
+<section id="journey" class="section section-dark reveal">
+
+    <div class="section-heading">
+        <span>04.</span> JOURNEY
     </div>
 
     <div class="timeline">
 
+
         <div class="timeline-item">
 
-            <span class="year">2023</span>
+            <div class="timeline-date">
+                2024
+            </div>
 
-            <div>
-                <h3>Started Learning</h3>
+            <div class="timeline-content">
+
+                <h3>
+                    Started Cybersecurity
+                </h3>
 
                 <p>
-                    Mulai mempelajari dasar Linux, networking,
-                    command line dan programming.
+                    Started learning Linux,
+                    networking and basic
+                    cybersecurity concepts.
                 </p>
+
             </div>
 
         </div>
@@ -393,15 +553,22 @@
 
         <div class="timeline-item">
 
-            <span class="year">2024</span>
+            <div class="timeline-date">
+                2025
+            </div>
 
-            <div>
-                <h3>Web Security</h3>
+            <div class="timeline-content">
+
+                <h3>
+                    Web Security
+                </h3>
 
                 <p>
-                    Mulai fokus mempelajari keamanan aplikasi web,
-                    HTTP, authentication dan vulnerability research.
+                    Started exploring HTTP,
+                    web vulnerabilities and
+                    penetration testing.
                 </p>
+
             </div>
 
         </div>
@@ -409,49 +576,41 @@
 
         <div class="timeline-item">
 
-            <span class="year">2025</span>
+            <div class="timeline-date">
+                2026
+            </div>
 
-            <div>
-                <h3>Security Research</h3>
+            <div class="timeline-content">
+
+                <h3>
+                    Security Research
+                </h3>
 
                 <p>
-                    Membuat berbagai project kecil untuk automation
-                    dan latihan cybersecurity.
+                    Studying vulnerability research,
+                    CVEs and building security
+                    projects in controlled labs.
                 </p>
+
             </div>
 
         </div>
 
-
-        <div class="timeline-item">
-
-            <span class="year">NOW</span>
-
-            <div>
-                <h3>Keep Learning</h3>
-
-                <p>
-                    Terus belajar penetration testing,
-                    secure coding dan vulnerability analysis.
-                </p>
-            </div>
-
-        </div>
 
     </div>
 
 </section>
 
 
-<!-- CONTACT -->
-<section id="contact" class="section contact">
+<!-- ================= CONTACT ================= -->
 
-    <div class="section-title">
-        <span>05.</span>
-        Contact
-    </div>
+<section id="contact" class="section contact-section reveal">
 
-    <div class="contact-box">
+    <div class="contact-content">
+
+        <p class="mini-title">
+            WHAT'S NEXT?
+        </p>
 
         <h2>
             Let's build something
@@ -459,22 +618,27 @@
         </h2>
 
         <p>
-            Punya project, collaboration atau ingin berdiskusi
-            tentang cybersecurity?
+            Interested in cybersecurity,
+            collaboration or just want to
+            talk about security?
         </p>
 
-        <div class="contact-links">
+        <div class="contact-buttons">
 
-            <a href="https://github.com/" target="_blank">
+            <a
+                href="mailto:your-email@example.com"
+                class="button primary"
+            >
+                Email Me
+            </a>
+
+            <a
+                href="https://github.com/fahriic0de"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button secondary"
+            >
                 GitHub
-            </a>
-
-            <a href="https://linkedin.com/" target="_blank">
-                LinkedIn
-            </a>
-
-            <a href="mailto:your@email.com">
-                Email
             </a>
 
         </div>
@@ -483,19 +647,38 @@
 
 </section>
 
+</main>
 
-<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-    <p>
-        © 2026 Fahri XD
-    </p>
+    <div>
+        © <span id="year"></span>
+        Fahri XD
+    </div>
 
-    <p>
-        Built with HTML · CSS · JS
-    </p>
+    <div>
+        <strong>CYBER SECURITY</strong>
+        <div class="footer-status">
+            SYSTEM ONLINE
+        </div>
+    </div>
 
 </footer>
+
+
+<!-- ================= TOP BUTTON ================= -->
+
+<button
+    class="top-button"
+    id="topButton"
+    type="button"
+    aria-label="Back to top"
+>
+    ↑
+</button>
 
 
 <script src="script.js"></script>
